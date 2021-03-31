@@ -11,7 +11,7 @@
  * file that was distributed with this source code.
 */
 
-namespace mihaildev\elfinder;
+namespace aik27\elfinder;
 use Yii;
 use yii\filters\AccessControl;
 use yii\helpers\ArrayHelper;
@@ -24,7 +24,7 @@ use yii\web\JsExpression;
 /**
  * Class BaseController
  *
- * @package mihaildev\elfinder
+ * @package aik27\elfinder
  */
 class BaseController extends Controller{
 	public $access = ['@'];

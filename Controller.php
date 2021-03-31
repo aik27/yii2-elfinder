@@ -4,9 +4,9 @@
  * Time: 13:26
  */
 
-namespace mihaildev\elfinder;
+namespace aik27\elfinder;
 
-use mihaildev\elfinder\volume\Local;
+use aik27\elfinder\volume\Local;
 use Yii;
 use yii\helpers\ArrayHelper;
 
@@ -14,7 +14,7 @@ use yii\helpers\ArrayHelper;
 
 /**
  * Class Controller
- * @package mihaildev\elfinder
+ * @package aik27\elfinder
  * @property array $options
  */
 
@@ -42,7 +42,7 @@ class Controller extends BaseController{
 
 			$root = Yii::createObject($root);
 
-			/** @var \mihaildev\elfinder\volume\Local $root*/
+			/** @var \aik27\elfinder\volume\Local $root*/
 
 			if($root->isAvailable())
 				$this->_options['roots'][] = $root->getRoot();

@@ -11,7 +11,7 @@
  * file that was distributed with this source code.
 */
 
-namespace mihaildev\elfinder;
+namespace aik27\elfinder;
 use yii\base\Widget;
 use yii\helpers\Html;
 use yii\helpers\Json;
@@ -19,7 +19,7 @@ use yii\helpers\Json;
 /**
  * Class ButtonWidget
  *
- * @package mihaildev\elfinder
+ * @package aik27\elfinder
  */
 class ButtonWidget extends Widget{
 	public $language;

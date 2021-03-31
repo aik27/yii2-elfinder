@@ -4,7 +4,7 @@
  * Time: 1:27
  */
 
-namespace mihaildev\elfinder;
+namespace aik27\elfinder;
 
 use Yii;
 use yii\helpers\Html;

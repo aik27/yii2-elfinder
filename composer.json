@@ -1,8 +1,8 @@
 {
-    "name": "mihaildev/yii2-elfinder",
+    "name": "aik27/yii2-elfinder",
     "keywords": ["yii", "elfinder", "filemanager"],
     "description": "Yii2 ElFinder",
-    "homepage": "https://github.com/MihailDev/yii2-elfinder",
+    "homepage": "https://github.com/aik27/yii2-elfinder",
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "minimum-stability":"stable",
@@ -15,7 +15,7 @@
         }
     ],
     "autoload": {
-        "psr-4": {"mihaildev\\elfinder\\": ""}
+        "psr-4": {"aik27\\elfinder\\": ""}
     },
     "require": {
         "yiisoft/yii2": "~2.0.13",

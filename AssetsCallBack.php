@@ -4,7 +4,7 @@
  * Time: 0:51
  */
 
-namespace mihaildev\elfinder;
+namespace aik27\elfinder;
 
 
 use yii\web\AssetBundle;

@@ -4,10 +4,10 @@
  * Time: 0:14
  */
 
-namespace mihaildev\elfinder\plugin;
+namespace aik27\elfinder\plugin;
 
 
-use mihaildev\elfinder\PluginInterface;
+use aik27\elfinder\PluginInterface;
 use yii\helpers\Inflector;
 
 class Sluggable extends PluginInterface

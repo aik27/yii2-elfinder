@@ -11,8 +11,8 @@
  * file that was distributed with this source code.
 */
 
-namespace mihaildev\elfinder;
-use mihaildev\elfinder\volume\Local;
+namespace aik27\elfinder;
+use aik27\elfinder\volume\Local;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
 use Yii;
@@ -20,7 +20,7 @@ use Yii;
 /**
  * Class PathController
  *
- * @package mihaildev\elfinder
+ * @package aik27\elfinder
  */
 class PathController extends BaseController{
 	public $disabledCommands = ['netmount'];

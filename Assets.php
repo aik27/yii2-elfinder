@@ -1,6 +1,6 @@
 <?php
 
-namespace mihaildev\elfinder;
+namespace aik27\elfinder;
 
 use yii\web\AssetBundle;
 use yii\web\JqueryAsset;

@@ -4,7 +4,7 @@
  * @var array $options
 
  */
-use mihaildev\elfinder\Assets;
+use aik27\elfinder\Assets;
 use yii\helpers\Json;
 
 

@@ -34,13 +34,13 @@ mihaildev/yii2-elfinder-flysystem - https://github.com/MihailDev/yii2-elfinder-f
 Либо запустить
 
 ```
-php composer.phar require --prefer-dist mihaildev/yii2-elfinder "*"
+php composer.phar require --prefer-dist aik27/yii2-elfinder "*"
 ```
 
 или добавить
 
 ```json
-"mihaildev/yii2-elfinder": "*"
+"aik27/yii2-elfinder": "*"
 ```
 
 в разделе `require` вашего composer.json файла.
@@ -50,7 +50,7 @@ php composer.phar require --prefer-dist mihaildev/yii2-elfinder "*"
 ```php
 'controllerMap' => [
         'elfinder' => [
-            'class' => 'mihaildev\elfinder\Controller',
+            'class' => 'aik27\elfinder\Controller',
             'access' => ['@'], //глобальный доступ к фаил менеджеру @ - для авторизорованных , ? - для гостей , чтоб открыть всем ['@', '?']
             'disabledCommands' => ['netmount'], //отключение ненужных команд https://github.com/Studio-42/elFinder/wiki/Client-configuration-options#commands
             'roots' => [
@@ -61,7 +61,7 @@ php composer.phar require --prefer-dist mihaildev/yii2-elfinder "*"
                     'name' => 'Global'
                 ],
                 [
-                    'class' => 'mihaildev\elfinder\volume\UserPath',
+                    'class' => 'aik27\elfinder\volume\UserPath',
                     'path'  => 'files/user_{id}',
                     'name'  => 'My Documents'
                 ],
@@ -91,7 +91,7 @@ php composer.phar require --prefer-dist mihaildev/yii2-elfinder "*"
 ```php
 'controllerMap' => [
         'elfinder' => [
-			'class' => 'mihaildev\elfinder\PathController',
+			'class' => 'aik27\elfinder\PathController',
 			'access' => ['@'],
 			'root' => [
 				'path' => 'files',
@@ -113,8 +113,8 @@ php composer.phar require --prefer-dist mihaildev/yii2-elfinder "*"
 Разница между PathController и Controller в том что PathController работает только с одной папкой также имеет доп возможность передать в запросе на открытие под деритории
 
 
-На данный момент реализованно использование только LocalFileSystem хранилища (mihaildev\elfinder\volume\Local и mihaildev\elfinder\volume\UserPath)
-для использования остальных вам прийдётся всё настраивать через mihaildev\elfinder\volume\Base
+На данный момент реализованно использование только LocalFileSystem хранилища (aik27\elfinder\volume\Local и aik27\elfinder\volume\UserPath)
+для использования остальных вам прийдётся всё настраивать через aik27\elfinder\volume\Base
 также добавленно расширение  https://github.com/MihailDev/yii2-elfinder-flysystem/ это дополнение позволяет интегрировать Flysystem хранилища такие как
     Local
     Azure
@@ -161,11 +161,11 @@ php composer.phar require --prefer-dist mihaildev/yii2-elfinder "*"
 ```php
 'controllerMap' => [
         'elfinder' => [
-            'class' => 'mihaildev\elfinder\Controller',
-            //'plugin' => ['\mihaildev\elfinder\plugin\Sluggable'],
+            'class' => 'aik27\elfinder\Controller',
+            //'plugin' => ['\aik27\elfinder\plugin\Sluggable'],
             'plugin' => [
                 [
-                    'class'=>'\mihaildev\elfinder\plugin\Sluggable',
+                    'class'=>'\aik27\elfinder\plugin\Sluggable',
                     'lowercase' => true,
                     'replacement' => '-'
                 ]
@@ -190,7 +190,7 @@ php composer.phar require --prefer-dist mihaildev/yii2-elfinder "*"
 ```php
 'controllerMap' => [
         'elfinder' => [
-            'class' => 'mihaildev\elfinder\Controller',
+            'class' => 'aik27\elfinder\Controller',
             'connectOptions' => [
                 'bind' => [
                     'upload.pre mkdir.pre mkfile.pre rename.pre archive.pre ls.pre' => array(
@@ -234,8 +234,8 @@ php composer.phar require --prefer-dist mihaildev/yii2-elfinder "*"
 ## Использование
 
 ```php
-use mihaildev\elfinder\InputFile;
-use mihaildev\elfinder\ElFinder;
+use aik27\elfinder\InputFile;
+use aik27\elfinder\ElFinder;
 use yii\web\JsExpression;
 
 echo InputFile::widget([
@@ -267,8 +267,8 @@ echo ElFinder::widget([
 
 ## Использование при работе с PathController
 ```php
-use mihaildev\elfinder\InputFile;
-use mihaildev\elfinder\ElFinder;
+use aik27\elfinder\InputFile;
+use aik27\elfinder\ElFinder;
 use yii\web\JsExpression;
 
 echo InputFile::widget([
@@ -303,7 +303,7 @@ echo ElFinder::widget([
 
 ## CKEditor
 ```php
-use mihaildev\elfinder\ElFinder;
+use aik27\elfinder\ElFinder;
 
 $ckeditorOptions = ElFinder::ckeditorOptions($controller,[/* Some CKEditor Options */]);
 
@@ -311,7 +311,7 @@ $ckeditorOptions = ElFinder::ckeditorOptions($controller,[/* Some CKEditor Optio
 
 Для указания подкаталога (при использовании PathController)
 ```php
-use mihaildev\elfinder\ElFinder;
+use aik27\elfinder\ElFinder;
 
 $ckeditorOptions = ElFinder::ckeditorOptions([$controller, 'path' => 'some/sub/path'],[/* Some CKEditor Options */]);
 
@@ -320,8 +320,8 @@ $ckeditorOptions = ElFinder::ckeditorOptions([$controller, 'path' => 'some/sub/p
 Использование совместно с приложением "mihaildev/yii2-ckeditor" (https://github.com/MihailDev/yii2-ckeditor)
 
 ```php
-use mihaildev\ckeditor\CKEditor;
-use mihaildev\elfinder\ElFinder;
+use aik27\ckeditor\CKEditor;
+use aik27\elfinder\ElFinder;
 
 $form->field($model, 'attribute')->widget(CKEditor::className(), [
   ...
@@ -333,8 +333,8 @@ $form->field($model, 'attribute')->widget(CKEditor::className(), [
 Для указания подкаталога (при использовании PathController)
 
 ```php
-use mihaildev\ckeditor\CKEditor;
-use mihaildev\elfinder\ElFinder;
+use aik27\ckeditor\CKEditor;
+use aik27\elfinder\ElFinder;
 
 $form->field($model, 'attribute')->widget(CKEditor::className(), [
   ...
@@ -348,7 +348,7 @@ $form->field($model, 'attribute')->widget(CKEditor::className(), [
 Решение - добавляем в шаблон запись
 ```php
 
-mihaildev\elfinder\Assets::noConflict($this);
+aik27\elfinder\Assets::noConflict($this);
 
 ```
 

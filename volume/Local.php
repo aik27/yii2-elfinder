@@ -4,7 +4,7 @@
  * Time: 22:47
  */
 
-namespace mihaildev\elfinder\volume;
+namespace aik27\elfinder\volume;
 
 use Yii;
 
